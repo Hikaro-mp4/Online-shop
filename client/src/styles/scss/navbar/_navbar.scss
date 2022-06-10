@@ -1,9 +1,29 @@
 $bg_c:rgb(62, 62, 62);
+$bg_c_light:white;
+$c:white;
+
 $ff:-apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
 
 .navbar{
     background-color: $bg_c;
+    position: fixed;
     width: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+
+    &__menu{
+       &.active{
+        background-color: $bg_c;
+        top: 36px;
+        transition: all 0.4s;
+       }
+    }
+
+    &__username{
+        text-align: center;
+    }    
+
     &__link{
         color:white;  
         text-decoration: none;
@@ -16,5 +36,103 @@ $ff:-apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans
         width:36px;
         height: 36px;
     }
+
+    &__button{
+        background-color: $bg_c;
+        height: 36px;
+        border: none;
+        color: $c;
+        border-radius: 3px;
+        transition: all 0.2s;
+        &:hover{
+            background-color: $bg_c_light;
+            color: $bg_c;
+            span{
+                background-color:$bg_c;
+                color: $bg_c_light;
+            }
+        }
+    }
+
+    &__basketcount{
+        background-color: $bg_c_light;
+        padding: 2px 5px;
+        margin-left: 5px;
+        border-radius: 50px;
+        color:$bg_c;
+    }
+
+    &__username{
+        color:$bg_c_light;
+    }
+
+    @mixin burger($top,$deg) {
+        position: absolute; 
+        height: 2px;
+        width: 36px;
+        background-color: $bg_c_light;
+        display: block;
+        border-radius: 50px;
+        top: $top;
+        transform: rotate($deg);
+        
+        transition: all 0.2s;
+    }
+
+    &__burger{
+        width: 36px;
+        height: 36px;
+        display: none;
+        position: relative;
+        z-index: 8;
+        span{
+            @include burger(16px,0deg);
+        }
+        &::after{
+            content:'';
+            @include burger(26px,0deg);
+        }
+        &::before{
+            content:'';
+            @include burger(6px,0deg);
+        }
+        &.active{
+            span{
+                @include burger(16px,0deg);
+                transform: scale(0);
+            }
+            &::after{
+                content:'';
+                @include burger(16px,-45deg);
+            }
+            &::before{
+                content:'';
+                @include burger(16px,45deg);
+            }
+        }
+    }
+    @media screen and (max-width:530px) {
+        &__menu{
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            top:-130px;
+            transition: all 0.4s;
+            z-index: -1;
+        }
+
+        &__auth{
+            display: flex;
+            flex-direction: column;
+            z-index: -2;
+        }
+
+        &__burger{
+            display: block;
+        }
+
+    }
 }
+
+
 

@@ -21,7 +21,7 @@ const Basket=observer(()=>{
        // basket.basket.map(dev=>console.log('1',dev))
        console.log(user.user,basket.basket)
     }
-    return(<div className="body">
+    return(<div className="basket">
        <BasketList/>
        {/* <button onClick={bas}>click on button - u get result</button> */}
     </div>)

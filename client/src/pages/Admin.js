@@ -15,7 +15,6 @@ const Admin=()=>{
         
     }
     return(<div className="body">
-        
        <div className="admin_flex">
         <div className="admin_content">
             <button className="admin_btn" onClick={()=>setActiveDev(true)}>Create device</button>
