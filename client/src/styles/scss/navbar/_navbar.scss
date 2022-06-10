@@ -1,0 +1,20 @@
+$bg_c:rgb(62, 62, 62);
+$ff:-apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+
+.navbar{
+    background-color: $bg_c;
+    width: 100%;
+    &__link{
+        color:white;  
+        text-decoration: none;
+        font-size: 30px;
+        display: flex;
+    }
+    
+    &__logo{
+        border-radius: 50px;
+        width:36px;
+        height: 36px;
+    }
+}
+

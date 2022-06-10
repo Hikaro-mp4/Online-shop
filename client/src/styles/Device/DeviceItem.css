@@ -1,0 +1,33 @@
+.dev_img{
+    width: 100px;   
+    height: 120px;
+}
+
+.dev_item{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dev_item:hover{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px black;
+    background-color: #3d3d3d;
+}
+
+.dev_rating img{
+    width: 15px;
+  
+}
+
+.dev_rating{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dev_item div{
+    padding-bottom: 5px;
+}
+
+

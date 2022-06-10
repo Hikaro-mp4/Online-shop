@@ -1,0 +1,84 @@
+.devPage_img{
+    width: 300px;   
+    height: 360px;
+}
+
+.devPage_item{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.devPage_item:hover{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px black;
+    background-color: #3d3d3d;
+}
+
+.devPage_rating img{
+    width: 30px; 
+}
+
+.devPage_rating img:hover{
+    width: 35px;
+    margin-top: -10px;
+}
+
+.devPage_rating{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.devPage_item div{
+    padding-bottom: 5px;
+}
+
+.devPage_flex{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    font-size: 30px;
+}
+
+.devPage_block{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.devPage_info div{
+    padding-bottom: 10px;
+    
+}
+.devPage_info{
+    padding-left: 20px;
+}
+
+.devPage_price{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px black;
+    background-color: #3d3d3d;
+    padding-top: 10px;
+    font-size: 40px;
+}
+
+.devPage_button{
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px black;
+    background-color: #222226;
+    padding-top: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.devPage_button:hover{
+    border: 1px solid #24a12f;
+    background-color: #24a12f;
+}
+
+.devPage_leftSide{
+    font-size: 20px;
+}

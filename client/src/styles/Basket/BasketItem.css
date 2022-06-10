@@ -1,0 +1,39 @@
+.basket_img{
+    width: 60px;
+    padding-right: 20px;
+}
+
+.basket_rating img{
+    width: 18px;
+}
+
+.basket_item{
+    display: flex;
+    padding: 10px;
+}
+
+.basket_name{
+    width: 200px;
+}   
+
+.basket_rating_num{
+    width: 40px;
+}
+
+.basket_price{
+    width: 100px;
+}
+
+.basket_item:hover{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px black;
+    background-color: #3d3d3d;
+}
+
+.basket_button{
+    
+    background-color: #3d3d3d;
+    color: #fff;
+    opacity: 0.4;
+}

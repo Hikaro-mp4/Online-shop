@@ -1,0 +1,43 @@
+.form{
+    display: flex;
+    flex-direction: column;   
+    width: 200px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+}
+
+.form input{
+    background-color: #444446;
+    border: none;
+    border-radius: 6px;
+    outline:none;
+    color:#fff;
+    height: 30px;
+    margin-bottom:2px ;
+    font-size: 15px; 
+}
+
+.link_reg{
+   
+    text-decoration: none;
+    color: #888888;
+}
+
+.link_reg:hover{
+    color:white;  
+}
+
+.auth{
+    text-align: center;
+    font-size: 30px;
+}
+
+.form div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

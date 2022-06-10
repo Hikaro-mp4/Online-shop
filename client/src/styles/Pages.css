@@ -1,0 +1,18 @@
+.pages_btn{
+    background-color: #222226;
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 1px rgb(255, 255, 255);
+    color:white;  
+    cursor: pointer;
+
+}
+
+.pages_btn:hover{
+    background-color: #888888;
+}
+
