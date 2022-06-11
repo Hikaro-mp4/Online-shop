@@ -7,7 +7,7 @@ import { authRoutes,publicRoutes } from "../routes";
 
 const AppRouter=()=>{
    const {user}=useContext(Context)
-    console.log(user)
+    // console.log(user)
     return(
     //     <div>
     //          {publicRoutes.map(({path,Component})=>{

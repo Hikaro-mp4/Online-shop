@@ -4,6 +4,7 @@ import { Context } from "..";
 import Alert from "../components/Alert";
 import BrandBar from "../components/BrandBar";
 import DeviceList from "../components/DeviceList";
+import Filter from "../components/Filter/Filter";
 import Pages from "../components/Pages";
 import Select from "../components/Select";
 import TypeBar from "../components/TypeBar";
@@ -14,6 +15,7 @@ const Shop=observer(()=>{
     const {device}=useContext(Context)
     const {user}=useContext(Context)
     const [update,setUpdate]=useState('')
+
     const updateTypeTest=()=>{
         console.log(device.selectedType.id,update)
         updateType({id:device.selectedType.id,name:update}).then(data=>
@@ -32,7 +34,7 @@ const Shop=observer(()=>{
     },[])
 
     useEffect(()=>{
-        console.log('user',user.user.id)
+        // console.log('user',user.user.id)
         fetchDevices(device.selectedType.id,device.selectedBrand.id,device.page,device.limit).then(data=>{
             device.setDevices(data.rows)
             device.setTotalCount(data.count)
@@ -40,13 +42,14 @@ const Shop=observer(()=>{
     },[device.page,device.selectedType,device.selectedBrand])
     
     
-    return(<div className="body shop_container">
+    return(<div className="container">
         <div className="shop_flex">
-            <div>
-                <div>Types</div>
+            <div className="filter">
+                <Filter device={device}/>
+                {/* <div>Types</div>
                 <TypeBar/>
                 <div>Brands</div>
-                <BrandBar/>
+                <BrandBar/> */}
             </div>
         <div>
                 <DeviceList/>

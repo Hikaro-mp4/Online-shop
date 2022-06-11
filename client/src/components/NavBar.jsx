@@ -16,7 +16,7 @@ const NavBar=observer(()=>{
     const [active,setActive]=useState(false)
     
     const url_path='https://png.pngtree.com/png-vector/20190929/ourmid/pngtree-shopping-cart-icon-png-image_1770325.jpg'   
-    console.log('user',user.user.role)
+    // console.log('user',user.user.role)
     const logOut=()=>{
         user.setUser({})
         user.setIsAuth(false)

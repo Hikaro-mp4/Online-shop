@@ -67,7 +67,7 @@ const DevicePage=observer(()=>{
         
     }
 
-    return(<div className="body">       
+    return(<div className="container">       
         <div className="devPage_flex">
             <div className="devPage_block">
                 <div className="devPage_leftSide">

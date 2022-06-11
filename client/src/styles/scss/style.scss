@@ -1,13 +1,28 @@
 @import './navbar/navbar';
+@import './filter/filter';
+@import './device/device';
 
 
+$ff:-apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
 $bg_c:rgb(40, 37, 37);
+
+*{
+    font-family: $ff;
+}
+
 body{
     margin: 0;
-    background-color: $bg_c;
+    background-color: $bg_c;  
+}
+
+li{
+    list-style-type: none;
 }
 
 .basket{
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
+.container{
+    padding-top: 70px;
+}

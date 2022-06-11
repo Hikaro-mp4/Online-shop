@@ -7,7 +7,7 @@ import '../styles/Basket/BasketList.css'
 const BasketList=observer(()=>{
     const {basket}=useContext(Context)
     const test=[1,2,4,5,6]
-    console.log('b',basket.basket.length)
+    // console.log('b',basket.basket.length)
     return(<div className="basket_list">
         {basket.basket.length>0
             ?
