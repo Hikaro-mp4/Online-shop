@@ -5,7 +5,8 @@ import Alert from "../components/Alert";
 import BrandBar from "../components/BrandBar";
 import DeviceList from "../components/Device/DeviceList";
 import Filter from "../components/Filter/Filter";
-import Pages from "../components/Pages";
+import Pagination from "../components/Pagination";
+import Pages from "../components/Pagination";
 import Select from "../components/Select";
 import TypeBar from "../components/TypeBar";
 import { fetchTypes,fetchBrands,fetchDevices, updateType } from "../http/deviceAPI";
@@ -23,7 +24,7 @@ const Shop=observer(()=>{
     }
 
     useEffect(()=>{
-        
+        device.setPage(0)
         fetchTypes().then(data=>device.setTypes(data))
         fetchBrands().then(data=>device.setBrands(data))
 
@@ -34,11 +35,11 @@ const Shop=observer(()=>{
     },[])
 
     useEffect(()=>{
-        // console.log('user',user.user.id)
-        fetchDevices(device.selectedType.id,device.selectedBrand.id,device.page,device.limit).then(data=>{
+        console.log(device.page+1)
+        fetchDevices(device.selectedType.id,device.selectedBrand.id,device.page+1,device.limit).then(data=>{
             device.setDevices(data.rows)
             device.setTotalCount(data.count)
-        })
+        }).then(()=>console.log(device.totalCount))
     },[device.page,device.selectedType,device.selectedBrand])
     
     
@@ -54,7 +55,13 @@ const Shop=observer(()=>{
                     <div className="device">
                         <DeviceList/>
                     </div>
-                    <Pages/>
+                    <Pagination 
+                        setPage={device.setPage.bind(device)} 
+                        listLength={device.totalCount}
+                        limit={5}
+                        page={device.page}
+
+                    />
                 <div>
                        
                         {/* <Select options={[1,2,4,5,6,7]} defaultValue={'List'}/> */}

@@ -351,6 +351,42 @@
   }
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 280px;
+}
+
+.pagination__button {
+  cursor: pointer;
+  width: 100%;
+  background-color: #3e3e3e;
+  color: white;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.pagination__button:hover {
+  background-color: white;
+  color: #807d7d;
+}
+
+.pagination__button.active {
+  background-color: white;
+  color: #807d7d;
+}
+
+@media screen and (max-width: 730px) {
+  .pagination {
+    margin: 0 20px 0px 20px;
+  }
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
 }
@@ -366,6 +402,10 @@ li {
 
 .basket {
   padding-top: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {

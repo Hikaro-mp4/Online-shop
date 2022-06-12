@@ -1,0 +1,28 @@
+.pagination{
+    
+    display: flex;
+    height: $size;
+   
+    justify-content: space-around;
+    margin-left: 280px;
+    &__button{
+        cursor: pointer;
+        width: 100%;
+        background-color:$bg_c;
+        color: $c_light;
+        border: none;
+        transition: all 0.2s;
+        &:hover{
+            background-color: $bg_c_light;
+            color: $f_c;
+            
+        }
+        &.active{
+            background-color: $bg_c_light;
+            color: $f_c;
+        }
+    }
+    @media screen and (max-width:730px) { 
+        margin: 0 20px 0px 20px;
+    }
+}
