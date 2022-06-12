@@ -1,10 +1,18 @@
+$bg_c-f:rgb(40, 37, 37);
+$bg_c:rgb(62, 62, 62);
+$bg_c_light:white;
+$c_un:rgb(121, 121, 121);
+$f_c:rgb(128, 125, 125);
+$f_active:white;
+$c_light:white;
+
 @import './navbar/navbar';
 @import './filter/filter';
 @import './device/device';
 
 
 $ff:-apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
-$bg_c:rgb(40, 37, 37);
+
 
 *{
     font-family: $ff;
@@ -12,7 +20,7 @@ $bg_c:rgb(40, 37, 37);
 
 body{
     margin: 0;
-    background-color: $bg_c;  
+    background-color: $bg_c-f;  
 }
 
 li{
@@ -24,5 +32,21 @@ li{
 }
 
 .container{
+    margin: auto;
     padding-top: 70px;
+    width: 1200px;
+
+    @media screen and (max-width:1200px) {
+        &{
+            width: 730px;
+        }
+    }
+
+    @media screen and (max-width:730px) {
+        &{
+            width: 100%;
+        }
+    }
+
+
 }

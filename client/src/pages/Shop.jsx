@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "..";
 import Alert from "../components/Alert";
 import BrandBar from "../components/BrandBar";
-import DeviceList from "../components/DeviceList";
+import DeviceList from "../components/Device/DeviceList";
 import Filter from "../components/Filter/Filter";
 import Pages from "../components/Pages";
 import Select from "../components/Select";
@@ -43,26 +43,29 @@ const Shop=observer(()=>{
     
     
     return(<div className="container">
-        <div className="shop_flex">
-            <div className="filter">
-                <Filter device={device}/>
-                {/* <div>Types</div>
-                <TypeBar/>
-                <div>Brands</div>
-                <BrandBar/> */}
-            </div>
-        <div>
-                <DeviceList/>
-                <Pages/>
-                {/* <Select options={[1,2,4,5,6,7]} defaultValue={'List'}/> */}
-               
-                {/* <button onClick={updateTypeTest}>Update</button>
-                <input
-                    value={update}
-                    onChange={(e)=>setUpdate(e.target.value)}/> */}
-        </div>
+                <div className="shop">
+                    {/* <div className="filter"> */}
+                        <Filter device={device}/>
+                        {/* <div>Types</div>
+                        <TypeBar/>
+                        <div>Brands</div>
+                        <BrandBar/> */}
+                    {/* </div> */}
+                    <div className="device">
+                        <DeviceList/>
+                    </div>
+                    <Pages/>
+                <div>
+                       
+                        {/* <Select options={[1,2,4,5,6,7]} defaultValue={'List'}/> */}
+                    
+                        {/* <button onClick={updateTypeTest}>Update</button>
+                        <input
+                            value={update}
+                            onChange={(e)=>setUpdate(e.target.value)}/> */}
+                </div>
 
-        </div>
+                </div>
     </div>)
 })
 

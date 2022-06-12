@@ -1,7 +1,7 @@
-$bg_c:rgb(62, 62, 62);
-$bg_c_light:white;
-$c_un:rgb(121, 121, 121);
-$c:white;
+// $bg_c:rgb(62, 62, 62);
+// $bg_c_light:white;
+// $c_un:rgb(121, 121, 121);
+// $c:white;
 $size:56px;
 
 @mixin heightAndWidth($px){
@@ -9,9 +9,8 @@ $size:56px;
     width: $px;
 }
 
-.navbar{
-    
-    background-color: $bg_c;
+.navbar{ 
+    background-color:$bg_c;
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -27,7 +26,7 @@ $size:56px;
     }    
 
     &__link{
-        color:white;  
+        color:$c_light;  
         text-decoration: none;
         font-size: $size/1.3;
         display: flex;
@@ -41,9 +40,9 @@ $size:56px;
     &__button{
         font-size: $size/2.7;
         background-color: $bg_c;
-        height: 100%;
+        height: $size;
         border: none;
-        color: $c;
+        color: $c_light;
         border-radius: 3px;
         transition: all 0.2s;
         &:hover{
