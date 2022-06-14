@@ -55,13 +55,13 @@ const Shop=observer(()=>{
                     <div className="device">
                         <DeviceList/>
                     </div>
-                    <Pagination 
+                   {device.totalCount>0 && <Pagination 
                         setPage={device.setPage.bind(device)} 
                         listLength={device.totalCount}
                         limit={5}
                         page={device.page}
 
-                    />
+                    />}
                 <div>
                        
                         {/* <Select options={[1,2,4,5,6,7]} defaultValue={'List'}/> */}

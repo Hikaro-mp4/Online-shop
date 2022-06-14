@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import React, { useContext, useEffect } from "react";
 import { Context } from "..";
 
-import BasketList from "../components/BasketList";
+import BasketList from "../components/Basket/BasketList";
 import { getBasket } from "../http/basketAPI";
 
 const Basket=observer(()=>{
@@ -21,9 +21,14 @@ const Basket=observer(()=>{
        // basket.basket.map(dev=>console.log('1',dev))
        console.log(user.user,basket.basket)
     }
-    return(<div className="basket">
-       <BasketList/>
+    return(<div className="container">
+        <div className="basket">
+       <BasketList basket={basket}/>
        {/* <button onClick={bas}>click on button - u get result</button> */}
+       <div className="basket__totalprice">
+            Total price:{basket.basket.reduce((sum,device)=>sum+device.price,0)} rub
+       </div>
+    </div>
     </div>)
 })
 

@@ -71,7 +71,6 @@ class BasketController{
     async delFromBasket(req,res){
         try {
             const {userId,deviceId}=req.query
-
             console.log(req.query)
             const basket =BasketDevice.destroy(
                 {
@@ -94,6 +93,9 @@ class BasketController{
             console.log(error)
         }
     }
+
+
+
     async getAll(req,res){
         const baskets=await Basket.findAll()
         return res.json(baskets)
