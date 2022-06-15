@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "..";
-import '../styles/Device/DevicePage.css'
+// import '../styles/Device/DevicePage.css'
 import { useParams } from "react-router-dom";
 import { createRating, fetchOneDevices, fetchOneRatings, updateDevice } from "../http/deviceAPI";
 import { REACT_APP_API_URL } from "../http";
@@ -68,22 +68,14 @@ const DevicePage=observer(()=>{
     }
 
     return(<div className="container">       
-        <div className="devPage_flex">
-            <div className="devPage_block">
-                <div className="devPage_leftSide">
-                    <img className="devPage_img" src={REACT_APP_API_URL+ device.img}/>
-                    <h2>Сharacteristics</h2>
-                    <div>{device.info.map(desc=>
-                    <div key={desc.id}>
-                        {desc.title+': '+desc.description}
-                    </div>)}
-                    </div>
-                </div>
-                <div className="devPage_info">
-                    <div className="devPage_price">{device.price+' rub.'}</div>
-                    <div>{device.name}</div>
-                    <div className="devPage_rating">
-                        <div>{rat.map(i=>
+                <div className="devpage">
+                    <img 
+                        className="devpage__img" 
+                        src={REACT_APP_API_URL+ device.img}
+                    /> 
+                    <span className="devpage__name">{device.name}</span>
+                    <span className="devpage__rating">
+                        {rat.map(i=>
                             <img 
                                 onClick={()=>setRating(i)}
                                 key={i} 
@@ -91,17 +83,27 @@ const DevicePage=observer(()=>{
                                 {}:
                                 {filter:'opacity(0.2)'}} 
                                 src={ratingImage}/>)
-                            }
-                        </div>
-                        <div>{device.rating}</div>
-                    </div>  
-                        <button className='devPage_button' onClick={addTo}>Add in basket</button>               
+                        }
+                        <span>{device.rating}</span>
+                    
+                    </span>  
+                    <span className="devpage__price">{device.price+' rub.'}</span>
+                    <div className="devpage__desc">
+                        <h2>Сharacteristics</h2>
+                        <ul>
+                            {device.info.map(desc=>
+                                <li key={desc.id}>
+                                    {desc.title+': '+desc.description}
+                                </li>)}
+                        </ul>
+                    </div>
+                    <button 
+                        className='devpage__button' 
+                        onClick={addTo}
+                        >
+                        Add in basket
+                    </button>               
                 </div>
-                
-         
-            </div>
-
-        </div>
         <Alert value={alert} setValue={setAlert}/>
     </div>)
 })

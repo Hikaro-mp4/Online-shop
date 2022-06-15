@@ -5,6 +5,7 @@ import { Context } from "..";
 
 const Pages=observer(({setPage,listLength,limit,page,len=7})=>{
     const countOfButton=Math.ceil(listLength/limit)
+    console.log(listLength,limit,countOfButton,'count')
     const middle=Math.ceil(len/2)
    
     useEffect(()=>{

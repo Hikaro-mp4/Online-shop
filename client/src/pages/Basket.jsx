@@ -25,9 +25,11 @@ const Basket=observer(()=>{
         <div className="basket">
        <BasketList basket={basket}/>
        {/* <button onClick={bas}>click on button - u get result</button> */}
-       <div className="basket__totalprice">
-            Total price:{basket.basket.reduce((sum,device)=>sum+device.price,0)} rub
-       </div>
+      {basket.basket.length>0 &&
+         <div className="basket__totalprice">
+         Total price:{basket.basket.reduce((sum,device)=>sum+device.price,0)} rub
+    </div>
+      }
     </div>
     </div>)
 })

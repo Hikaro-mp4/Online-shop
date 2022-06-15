@@ -473,8 +473,46 @@
   }
 }
 
+.devpage {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.devpage__img {
+  width: 280px;
+}
+
+.devpage__name {
+  font-size: 46.66667px;
+}
+
+.devpage__price {
+  font-size: 46.66667px;
+}
+
+.devpage__rating img {
+  width: 46.66667px;
+}
+
+.devpage__rating span {
+  font-size: 46.66667px;
+}
+
+.devpage__button {
+  border: none;
+  background-color: #3e3e3e;
+}
+
+.devpage__button:hover {
+  background-color: green;
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+  color: white;
 }
 
 body {
@@ -484,10 +522,6 @@ body {
 
 li {
   list-style-type: none;
-}
-
-.basket {
-  padding-top: 70px;
 }
 
 html {

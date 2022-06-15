@@ -1,0 +1,38 @@
+.devpage{
+    display: grid;
+    justify-content: center;
+    &__img{
+        width: $size*5;
+    }
+
+    &__name{
+        font-size: $size/1.2;
+    }
+
+    &__price{
+        font-size: $size/1.2;
+       
+    }
+
+    &__rating{
+        img{
+            width: $size/1.2;
+        }
+
+        span{
+            font-size: $size/1.2;
+        }
+    }
+
+    &__button{
+        border:none;
+        background-color: $bg_c;
+        
+        &:hover{
+           
+            background-color: green;
+        }
+    }
+
+
+}

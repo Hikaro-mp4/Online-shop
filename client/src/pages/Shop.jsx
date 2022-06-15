@@ -58,7 +58,7 @@ const Shop=observer(()=>{
                    {device.totalCount>0 && <Pagination 
                         setPage={device.setPage.bind(device)} 
                         listLength={device.totalCount}
-                        limit={5}
+                        limit={3}
                         page={device.page}
 
                     />}
