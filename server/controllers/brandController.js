@@ -15,6 +15,16 @@ class BrandController{
         }
     }
 
+    async update(req, res) {
+        try {
+            const {id,name} = req.body
+            const brand = await Brand.update({name:name},{where:{id:id}})
+            return res.json(brand)
+        } catch (error) {
+            console.log(error)
+        }   
+    }
+
     async getAll(req,res){
         const brands=await Brand.findAll()
         return res.json(brands)

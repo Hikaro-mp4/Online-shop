@@ -20,8 +20,17 @@ class TypeController {
     async update(req, res) {
         try {
             const {id,name} = req.body
-            console.log("Seeee meee? Pleaseeee",id,name)
             const type = await Type.update({name:name},{where:{id:id}})
+            return res.json(type)
+        } catch (error) {
+            console.log(error)
+        }   
+    }
+
+    async delete(req, res) {
+        try {
+            const {id} = req.query
+            const type = await Type.destroy({where:{id:id}})
             return res.json(type)
         } catch (error) {
             console.log(error)

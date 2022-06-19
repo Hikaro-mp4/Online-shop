@@ -10,6 +10,15 @@ $size:56px;
         font-size: $size/2;
     }
 
+    &__button{
+        background-color: $bg_c;
+        &:hover{
+            background-color: $bg_c_light;
+            color: $bg_c;
+
+        }
+    }
+
     &__menu{
         position: fixed;
         background-color: $bg_c;

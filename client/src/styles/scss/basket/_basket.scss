@@ -50,6 +50,7 @@
         border: 0;
         font-size: $size;
         color: $c_light;
+        transition: all 0.2s;
 
         &:hover{
             background-color: $bg_c_light;

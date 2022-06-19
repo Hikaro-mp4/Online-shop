@@ -1,0 +1,22 @@
+.filter-edit{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+
+    &__content{
+        padding: 100px;
+        background-color: $bg_c;
+    }
+
+    &__input{
+        border: none;
+        background-color: $bg_c-f;
+    }
+}

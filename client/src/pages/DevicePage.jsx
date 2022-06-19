@@ -88,21 +88,24 @@ const DevicePage=observer(()=>{
                     
                     </span>  
                     <span className="devpage__price">{device.price+' rub.'}</span>
-                    <div className="devpage__desc">
-                        <h2>Сharacteristics</h2>
-                        <ul>
-                            {device.info.map(desc=>
-                                <li key={desc.id}>
-                                    {desc.title+': '+desc.description}
-                                </li>)}
-                        </ul>
-                    </div>
                     <button 
                         className='devpage__button' 
                         onClick={addTo}
                         >
                         Add in basket
                     </button>               
+                   {device.info.length>0 && 
+                     <div className="devpage__desc">
+                     <h2>Сharacteristics</h2>
+                     <ul>
+                         {device.info.map(desc=>
+                             <li key={desc.id}>
+                                 {desc.title+': '+desc.description}
+                             </li>)}
+                     </ul>
+                 </div>
+                   }
+                   
                 </div>
         <Alert value={alert} setValue={setAlert}/>
     </div>)

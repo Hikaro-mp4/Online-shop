@@ -7,8 +7,13 @@ export const createType= async(type)=>{
 }
 
 export const updateType= async(type)=>{
-    console.log()
     const {data}=await $authHost.put('api/type',type)
+    return data
+}
+
+export const deleteType= async(id)=>{
+    console.log(id)
+    const {data}=await $authHost.delete('api/type',{params:{id}})
     return data
 }
 
@@ -19,6 +24,11 @@ export const fetchTypes= async()=>{
 
 export const createBrand= async(brand)=>{
     const {data}=await $authHost.post('api/brand',brand)
+    return data
+}
+
+export const updateBrand= async(brand)=>{
+    const {data}=await $authHost.put('api/brand',brand)
     return data
 }
 

@@ -5,6 +5,7 @@ const checkRole=require('../middleware/checkRoleMiddleware')
 
 router.post('/',checkRole('ADMIN'), typeController.create)
 router.get('/',typeController.getAll)
+router.delete('/',typeController.delete)
 router.get('/:id')
 router.put('/',checkRole('ADMIN'), typeController.update)
 

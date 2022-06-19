@@ -10,12 +10,15 @@ import Pages from "../components/Pagination";
 import Select from "../components/Select";
 import TypeBar from "../components/TypeBar";
 import { fetchTypes,fetchBrands,fetchDevices, updateType } from "../http/deviceAPI";
+import FilterEdit from "../modals/FilterEdit";
 import '../styles/Shop.css'
 
 const Shop=observer(()=>{
     const {device}=useContext(Context)
     const {user}=useContext(Context)
     const [update,setUpdate]=useState('')
+
+    const [active,setActive]=useState(false)
 
     const updateTypeTest=()=>{
         console.log(device.selectedType.id,update)
@@ -44,6 +47,10 @@ const Shop=observer(()=>{
     
     
     return(<div className="container">
+                <button onClick={()=>setActive(true)}>
+                    test
+                </button>
+                <FilterEdit active={active} setActive={setActive} name='Types'/>
                 <div className="shop">
                     {/* <div className="filter"> */}
                         <Filter device={device}/>
